@@ -110,11 +110,13 @@ function classify()
     -- local img = Image.load("resources/Test/"..tostring(j)..".png")
     local hora2 = DateTime.getTimestamp()
     math.randomseed(DateTime.getTimestamp())
-    
+    -- loading addiotnal images
     local img01 = Image.load("resources/Fonte/"..tostring(math.random(6))..".png")
     local img02 = Image.load("resources/Fonte/"..tostring(math.random(6))..".png")
     local img03 = Image.load("resources/Fonte/"..tostring(math.random(6))..".png")
     local img04 = Image.load("resources/Fonte/"..tostring(math.random(6))..".png")
+    
+    -- merging images
     local imgS01 = Image.concatenate(img01, img02, "RIGHT")
     local imgS02 = Image.concatenate(img03, img04, "RIGHT")
     local img = Image.concatenate(imgS01, imgS02, "RIGHT")
