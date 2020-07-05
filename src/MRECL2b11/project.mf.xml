@@ -1,0 +1,959 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<manifest>
+    <application name="MRECL2b11">
+        <crown name="ColorSorter">
+            <desc>user script</desc>
+            <serves>
+                <event name="OnNewJobSelectedJobName">
+                    <desc>No description yet...</desc>
+                    <param name="JobName" type="string" desc="No description yet..."/>
+                </event>
+                <event name="OnNewJobSelectedForegroundMin">
+                    <desc>No description yet...</desc>
+                    <param name="newParam0" type="int" desc="No description yet..."/>
+                </event>
+                <event name="OnNewJobSelectedForegroundMax">
+                    <desc>No description yet...</desc>
+                    <param name="newParam0" type="int" desc="No description yet..."/>
+                </event>
+                <event name="OnNewJobSelectedBackgroundMin">
+                    <desc>No description yet...</desc>
+                    <param name="newParam0" type="int" desc="No description yet..."/>
+                </event>
+                <event name="OnNewJobSelectedBackgroundMax">
+                    <desc>No description yet...</desc>
+                    <param name="newParam0" type="int" desc="No description yet..."/>
+                </event>
+                <event name="OnNewJobSelectedActualColor">
+                    <desc>No description yet...</desc>
+                    <param name="newParam0" type="int" desc="No description yet..."/>
+                </event>
+                <event name="OnNewJobSelectedActualColorActive">
+                    <desc>No description yet...</desc>
+                    <param name="newParam0" type="bool" desc="No description yet..."/>
+                </event>
+                <event name="OnNewJobSelectedActualColorValue">
+                    <desc>No description yet...</desc>
+                    <param name="newParam0" type="int" desc="No description yet..."/>
+                </event>
+                <event name="OnNewJobSelectedActualColorTolerance">
+                    <desc>No description yet...</desc>
+                    <param name="newParam0" type="int" desc="No description yet..."/>
+                </event>
+                <event name="OnNewJobSelectedActualColorBlobSize">
+                    <desc>No description yet...</desc>
+                    <param name="newParam0" type="int" desc="No description yet..."/>
+                </event>
+                <event name="OnNewJobSelectedShutterTime">
+                    <desc>No description yet...</desc>
+                    <param name="newParam0" type="int" desc="No description yet..."/>
+                </event>
+                <event name="OnNewJobSelectedFramerate">
+                    <desc>No description yet...</desc>
+                    <param name="newParam0" type="int" desc="No description yet..."/>
+                </event>
+                <event name="OnNewJobSelectedGain">
+                    <desc>No description yet...</desc>
+                    <param name="newParam0" type="int" desc="No description yet..."/>
+                </event>
+                <event name="OnNewJobSelectedScaleFactor">
+                    <desc>No description yet...</desc>
+                    <param name="newParam0" type="float" desc="No description yet..."/>
+                </event>
+                <event name="OnFoundCamera">
+                    <desc>No description yet...</desc>
+                    <param name="newParam0" type="bool" desc="No description yet..."/>
+                </event>
+                <event name="OnSearchForCamera">
+                    <desc>No description yet...</desc>
+                    <param name="newParam0" type="bool" desc="No description yet..."/>
+                </event>
+                <event name="OnNewBlobsColor1">
+                    <desc>No description yet...</desc>
+                    <param name="newParam0" type="string" desc="No description yet..."/>
+                </event>
+                <event name="OnNewBlobsColor2">
+                    <desc>No description yet...</desc>
+                    <param name="newParam0" type="string" desc="No description yet..."/>
+                </event>
+                <event name="OnNewBlobsColor3">
+                    <desc>No description yet...</desc>
+                    <param name="newParam0" type="string" desc="No description yet..."/>
+                </event>
+                <event name="OnNewBlobsColor4">
+                    <desc>No description yet...</desc>
+                    <param name="newParam0" type="string" desc="No description yet..."/>
+                </event>
+                <event name="OnNewBlobsActualColor">
+                    <desc>No description yet...</desc>
+                    <param name="newParam0" type="string" desc="No description yet..."/>
+                </event>
+                <event name="OnNewBlobsActualColorMinBlob">
+                    <desc>No description yet...</desc>
+                    <param name="newParam0" type="string" desc="No description yet..."/>
+                </event>
+                <event name="OnNewBlobsActualColorMaxBlob">
+                    <desc>No description yet...</desc>
+                    <param name="parametername" type="string" desc="No description yet..."/>
+                </event>
+                <event name="OnNewBlobsColorMinBlob1">
+                    <desc>No description yet...</desc>
+                    <param name="parametername" type="string" desc="No description yet..."/>
+                </event>
+                <event name="OnNewBlobsColorMinBlob2">
+                    <desc>No description yet...</desc>
+                    <param name="parametername" type="string" desc="No description yet..."/>
+                </event>
+                <event name="OnNewBlobsColorMinBlob3">
+                    <desc>No description yet...</desc>
+                    <param name="parametername" type="string" desc="No description yet..."/>
+                </event>
+                <event name="OnNewBlobsColorMinBlob4">
+                    <desc>No description yet...</desc>
+                    <param name="parametername" type="string" desc="No description yet..."/>
+                </event>
+                <event name="OnNewBlobsColorMaxBlob1">
+                    <desc>No description yet...</desc>
+                    <param name="parametername" type="string" desc="No description yet..."/>
+                </event>
+                <event name="OnNewBlobsColorMaxBlob2">
+                    <desc>No description yet...</desc>
+                    <param name="parametername" type="string" desc="No description yet..."/>
+                </event>
+                <event name="OnNewBlobsColorMaxBlob3">
+                    <desc>No description yet...</desc>
+                    <param name="parametername" type="string" desc="No description yet..."/>
+                </event>
+                <event name="OnNewBlobsColorMaxBlob4">
+                    <desc>No description yet...</desc>
+                    <param name="parametername" type="string" desc="No description yet..."/>
+                </event>
+                <event name="OnNewJobSelectedMinBlobGood1">
+                    <desc>No description yet...</desc>
+                    <param name="parametername" type="int" desc="No description yet..."/>
+                </event>
+                <event name="OnNewJobSelectedMinBlobGood2">
+                    <desc>No description yet...</desc>
+                    <param name="parametername" type="int" desc="No description yet..."/>
+                </event>
+                <event name="OnNewJobSelectedMinBlobGood3">
+                    <desc>No description yet...</desc>
+                    <param name="parametername" type="int" desc="No description yet..."/>
+                </event>
+                <event name="OnNewJobSelectedMinBlobGood4">
+                    <desc>No description yet...</desc>
+                    <param name="parametername" type="int" desc="No description yet..."/>
+                </event>
+                <event name="OnNewJobSelectedMaxBlobGood1">
+                    <desc>No description yet...</desc>
+                    <param name="parametername" type="int" desc="No description yet..."/>
+                </event>
+                <event name="OnNewJobSelectedMaxBlobGood2">
+                    <desc>No description yet...</desc>
+                    <param name="parametername" type="int" desc="No description yet..."/>
+                </event>
+                <event name="OnNewJobSelectedMaxBlobGood3">
+                    <desc>No description yet...</desc>
+                    <param name="parametername" type="int" desc="No description yet..."/>
+                </event>
+                <event name="OnNewJobSelectedMaxBlobGood4">
+                    <desc>No description yet...</desc>
+                    <param name="parametername" type="int" desc="No description yet..."/>
+                </event>
+                <event name="OnNewResultGood">
+                    <desc>No description yet...</desc>
+                    <param name="parametername" type="bool" desc="No description yet..."/>
+                </event>
+                <event name="OnNewResultBad">
+                    <desc>No description yet...</desc>
+                    <param name="parametername" type="bool" desc="No description yet..."/>
+                </event>
+                <event name="OnNewResult">
+                    <desc>No description yet...</desc>
+                    <param name="parametername" type="bool" desc="No description yet..."/>
+                </event>
+                <event name="OnPipetteActive">
+                    <desc>No description yet...</desc>
+                    <param name="parametername" type="bool" desc="No description yet..."/>
+                </event>
+                <event name="OnNewPipetteValue">
+                    <desc>No description yet...</desc>
+                    <param name="parametername" type="int" desc="No description yet..."/>
+                </event>
+                <event name="OnNewJobSelectedTriggerMode">
+                    <desc>No description yet...</desc>
+                    <param name="parametername" type="int" desc="No description yet..."/>
+                </event>
+                <event name="OnNewJobSelectedForegroundImage">
+                    <desc>No description yet...</desc>
+                    <param name="parametername" type="int" desc="No description yet..."/>
+                </event>
+                <event name="OnNewJobSelectedBackgroundImage">
+                    <desc>No description yet...</desc>
+                    <param name="parametername" type="int" desc="No description yet..."/>
+                </event>
+                <event name="OnNewJobSelectedTcpIpIsActive">
+                    <desc>No description yet...</desc>
+                    <param name="parametername" type="bool" desc="No description yet..."/>
+                </event>
+                <event name="OnNewJobSelectedTcpIpServerAddress">
+                    <desc>No description yet...</desc>
+                    <param name="parametername" type="string" desc="No description yet..."/>
+                </event>
+                <event name="OnNewJobSelectedTcpIpPort">
+                    <desc>No description yet...</desc>
+                    <param name="parametername" type="int" desc="No description yet..."/>
+                </event>
+                <event name="OnNewJobSelectedTcpIpOutputMode">
+                    <desc>No description yet...</desc>
+                    <param name="parametername" type="int" desc="No description yet..."/>
+                </event>
+                <event name="OnNewJobSelectedDigitalOutputIsActive">
+                    <desc>No description yet...</desc>
+                    <param name="parametername" type="bool" desc="No description yet..."/>
+                </event>
+                <event name="OnNewJobSelectedColor1Active">
+                    <desc>No description yet...</desc>
+                    <param name="parametername" type="bool" desc="No description yet..."/>
+                </event>
+                <event name="OnNewJobSelectedColor2Active">
+                    <desc>No description yet...</desc>
+                    <param name="parametername" type="bool" desc="No description yet..."/>
+                </event>
+                <event name="OnNewJobSelectedColor3Active">
+                    <desc>No description yet...</desc>
+                    <param name="parametername" type="bool" desc="No description yet..."/>
+                </event>
+                <event name="OnNewJobSelectedColor4Active">
+                    <desc>No description yet...</desc>
+                    <param name="parametername" type="bool" desc="No description yet..."/>
+                </event>
+                <event name="OnNewJobSelectedViaEthernet">
+                    <desc>No description yet...</desc>
+                    <param name="parametername" type="int" desc="No description yet..."/>
+                </event>
+                <event name="OnNewJobSelectedCamIP">
+                    <desc>No description yet...</desc>
+                    <param name="parametername" type="string" desc="No description yet..."/>
+                </event>
+                <event name="OnScanForCamera">
+                    <desc>No description yet...</desc>
+                    <param name="parametername" type="bool" desc="No description yet..."/>
+                </event>
+                <event name="OnFoundCameraWithScan">
+                    <desc>No description yet...</desc>
+                    <param name="parametername" type="string" desc="No description yet..."/>
+                </event>
+                <event name="OnReadyToSendIpToCamera">
+                    <desc>No description yet...</desc>
+                    <param name="parametername" type="bool" desc="No description yet..."/>
+                </event>
+                <event name="OnSetCamIpSuccess">
+                    <desc>No description yet...</desc>
+                    <param name="parametername" type="bool" desc="No description yet..."/>
+                </event>
+                <event name="OnSetCamIpVisible">
+                    <desc>No description yet...</desc>
+                    <param name="parametername" type="bool" desc="No description yet..."/>
+                </event>
+                <event name="OnFrameRateActive">
+                    <desc>No description yet...</desc>
+                    <param name="parametername" type="bool" desc="No description yet..."/>
+                </event>
+                <event name="OnNewViewerId">
+                    <desc>No description yet...</desc>
+                    <param name="parametername" type="int" desc="No description yet..."/>
+                </event>
+                <event name="OnNewJobSelectedActualColorMaxBlobSize">
+                    <desc>No description yet...</desc>
+                    <param name="parametername" type="int" desc="No description yet..."/>
+                </event>
+                <event name="OnNewJobSelectedActualColorMinBlobSize">
+                    <desc>No description yet...</desc>
+                    <param name="parametername" type="int" desc="No description yet..."/>
+                </event>
+                <event name="OnShowConnectedSystem">
+                    <desc>No description yet...</desc>
+                    <param name="parametername" type="int" desc="No description yet..."/>
+                </event>
+                <event name="OnSwTriggerVisible">
+                    <desc>No description yet...</desc>
+                    <param name="parametername" type="bool" desc="No description yet..."/>
+                </event>
+                <event name="OnProcessingActive">
+                    <desc>No description yet...</desc>
+                    <param name="parametername" type="bool" desc="No description yet..."/>
+                </event>
+                <event name="OnNewProcessingTime">
+                    <desc>No description yet...</desc>
+                    <param name="parametername" type="string" desc="No description yet..."/>
+                </event>
+                <event name="OnRoiEditorActive">
+                    <desc>No description yet...</desc>
+                    <param name="parametername" type="bool" desc="No description yet..."/>
+                </event>
+                <event name="OnNewJobSelectedActualColorRoiActive">
+                    <desc>No description yet...</desc>
+                    <param name="parametername" type="bool" desc="No description yet..."/>
+                </event>
+                <event name="OnOfflineDemoModeActive">
+                    <desc>No description yet...</desc>
+                    <param name="parametername" type="bool" desc="No description yet..."/>
+                </event>
+                <event name="OnCameraSetupViewerActive">
+                    <desc>No description yet...</desc>
+                    <param name="parametername" type="bool" desc="No description yet..."/>
+                </event>
+                <event name="OnResultViewerActive">
+                    <desc>No description yet...</desc>
+                    <param name="parametername" type="bool" desc="No description yet..."/>
+                </event>
+                <event name="OnConfigViewerActive">
+                    <desc>No description yet...</desc>
+                    <param name="parametername" type="bool" desc="No description yet..."/>
+                </event>
+                <event name="OnNewObjectA">
+                    <desc>No description yet...</desc>
+                    <param name="parametername" type="int" desc="No description yet..."/>
+                </event>
+                <event name="OnNewObjectB">
+                    <desc>No description yet...</desc>
+                    <param name="parametername" type="int" desc="No description yet..."/>
+                </event>
+                <event name="OnNewObjectC">
+                    <desc>No description yet...</desc>
+                    <param name="parametername" type="int" desc="No description yet..."/>
+                </event>
+                <event name="OnNewObjectD">
+                    <desc>No description yet...</desc>
+                    <param name="parametername" type="int" desc="No description yet..."/>
+                </event>
+                <event name="OnNewColorMode">
+                    <desc>No description yet...</desc>
+                    <param name="parametername" type="int" desc="No description yet..."/>
+                </event>
+                <event name="OnNewResultColor1">
+                    <desc>No description yet...</desc>
+                    <param name="parametername" type="string" desc="No description yet..."/>
+                </event>
+                <event name="OnNewResultColor2">
+                    <desc>No description yet...</desc>
+                    <param name="parametername" type="string" desc="No description yet..."/>
+                </event>
+                <event name="OnNewResultColor3">
+                    <desc>No description yet...</desc>
+                    <param name="parametername" type="string" desc="No description yet..."/>
+                </event>
+                <event name="OnNewResultColor4">
+                    <desc>No description yet...</desc>
+                    <param name="parametername" type="string" desc="No description yet..."/>
+                </event>
+                <event name="OnNewActiveObjectList">
+                    <desc>No description yet...</desc>
+                    <param name="parametername" type="string" desc="No description yet..."/>
+                </event>
+                <function name="setShutterTime">
+                    <desc>Set Shutter Time out of UI</desc>
+                    <param name="uiShutterTime" type="int" desc="Shutter Time"/>
+                </function>
+                <function name="setFrameRate">
+                    <desc>No description yet...</desc>
+                    <param name="uiFrameRate" type="int" desc=""/>
+                </function>
+                <function name="setGainFactor">
+                    <desc>Set new Gain Factor for Camera</desc>
+                    <param name="uiGainFactor" type="float" desc="new Gain Factor for Camera"/>
+                </function>
+                <function name="setVisFactor">
+                    <desc>Factor for Visualization in UI</desc>
+                    <param name="uiVisFactor" type="float" desc=""/>
+                </function>
+                <function name="selectColor1">
+                    <desc>Color 1 to search for</desc>
+                    <param name="color" type="int" desc=""/>
+                </function>
+                <function name="setTolerance1">
+                    <desc>No description yet...</desc>
+                    <param name="tolerance" type="int" desc=""/>
+                </function>
+                <function name="setBlobSize1">
+                    <desc>No description yet...</desc>
+                    <param name="blobSize" type="int" desc=""/>
+                </function>
+                <function name="setColor1Active">
+                    <desc>No description yet...</desc>
+                    <param name="status" type="bool" desc=""/>
+                </function>
+                <function name="setCameraSetupViewerStatus">
+                    <desc>No description yet...</desc>
+                    <param name="status" type="bool" desc=""/>
+                </function>
+                <function name="setSaturationThreshold">
+                    <desc>No description yet...</desc>
+                    <param name="min" type="int" desc=""/>
+                    <param name="max" type="int" desc=""/>
+                </function>
+                <function name="setForegroundThreshold">
+                    <desc>No description yet...</desc>
+                    <param name="min" type="int" desc=""/>
+                    <param name="max" type="int" desc=""/>
+                </function>
+                <function name="setColorSelectorActive">
+                    <desc>No description yet...</desc>
+                    <param name="status" type="bool" desc=""/>
+                </function>
+                <function name="setViewerImage">
+                    <desc>No description yet...</desc>
+                    <param name="ID" type="int" desc=""/>
+                </function>
+                <function name="setConfigColor">
+                    <desc>No description yet...</desc>
+                    <param name="uiColorValue" type="int" desc=""/>
+                </function>
+                <function name="setConfigTolerance">
+                    <desc>No description yet...</desc>
+                    <param name="uiTolerance" type="int" desc=""/>
+                </function>
+                <function name="setConfigMinBlobSize">
+                    <desc>No description yet...</desc>
+                    <param name="size" type="int" desc=""/>
+                </function>
+                <function name="setSaturationThresholdMin">
+                    <desc>No description yet...</desc>
+                    <param name="min" type="int" desc=""/>
+                </function>
+                <function name="setSaturationThresholdMax">
+                    <desc>No description yet...</desc>
+                    <param name="max" type="int" desc=""/>
+                </function>
+                <function name="setForegroundThresholdMin">
+                    <desc>No description yet...</desc>
+                    <param name="min" type="int" desc=""/>
+                </function>
+                <function name="setForegroundThresholdMax">
+                    <desc>No description yet...</desc>
+                    <param name="max" type="int" desc=""/>
+                </function>
+                <function name="saveCameraConfig">
+                    <desc>Save last camera configuration</desc>
+                </function>
+                <function name="getVisFactor">
+                    <desc>No description yet...</desc>
+                    <return name="return1" type="float" desc=""/>
+                </function>
+                <function name="getShutterTime">
+                    <desc>No description yet...</desc>
+                    <return name="return1" type="int" desc=""/>
+                </function>
+                <function name="getFrameRate">
+                    <desc>No description yet...</desc>
+                    <return name="return1" type="int" desc=""/>
+                </function>
+                <function name="getGainFactor">
+                    <desc>No description yet...</desc>
+                    <return name="return1" type="float" desc=""/>
+                </function>
+                <function name="saveFilterValues">
+                    <desc>Save preprocessing values</desc>
+                </function>
+                <function name="getSaturationThresholdMin">
+                    <desc>No description yet...</desc>
+                    <return name="return1" type="int" desc=""/>
+                </function>
+                <function name="getSaturationThresholdMax">
+                    <desc>No description yet...</desc>
+                    <return name="return1" type="int" desc=""/>
+                </function>
+                <function name="getForegroundThresholdMin">
+                    <desc>No description yet...</desc>
+                    <return name="return1" type="int" desc=""/>
+                </function>
+                <function name="getForegroundThresholdMax">
+                    <desc>No description yet...</desc>
+                    <return name="return1" type="int" desc=""/>
+                </function>
+                <function name="setColor2Active">
+                    <desc>No description yet...</desc>
+                    <param name="status" type="bool" desc=""/>
+                </function>
+                <function name="setColor3Active">
+                    <desc>No description yet...</desc>
+                    <param name="status" type="bool" desc=""/>
+                </function>
+                <function name="setColor4Active">
+                    <desc>No description yet...</desc>
+                    <param name="status" type="bool" desc=""/>
+                </function>
+                <function name="selectColor2">
+                    <desc>No description yet...</desc>
+                    <param name="color" type="int" desc=""/>
+                </function>
+                <function name="selectColor3">
+                    <desc>No description yet...</desc>
+                    <param name="color" type="int" desc=""/>
+                </function>
+                <function name="selectColor4">
+                    <desc>No description yet...</desc>
+                    <param name="color" type="int" desc=""/>
+                </function>
+                <function name="setTolerance2">
+                    <desc>No description yet...</desc>
+                    <param name="tolerance" type="int" desc=""/>
+                </function>
+                <function name="setTolerance3">
+                    <desc>No description yet...</desc>
+                    <param name="tolerance" type="int" desc=""/>
+                </function>
+                <function name="setTolerance4">
+                    <desc>No description yet...</desc>
+                    <param name="tolerance" type="int" desc=""/>
+                </function>
+                <function name="setBlobSize2">
+                    <desc>No description yet...</desc>
+                    <param name="blobSize" type="int" desc=""/>
+                </function>
+                <function name="setBlobSize3">
+                    <desc>No description yet...</desc>
+                    <param name="blobSize" type="int" desc=""/>
+                </function>
+                <function name="setBlobSize4">
+                    <desc>No description yet...</desc>
+                    <param name="blobSize" type="int" desc=""/>
+                </function>
+                <function name="getFoundBlobs1">
+                    <desc>No description yet...</desc>
+                    <return name="newRetVal0" type="string" desc="No description yet..."/>
+                </function>
+                <function name="getFoundBlobs">
+                    <desc>No description yet...</desc>
+                    <return name="newRetVal0" type="string" desc="No description yet..."/>
+                </function>
+                <function name="createTCPsocket">
+                    <desc>Activate TCPClient Connection</desc>
+                    <param name="newParam0" type="bool" desc="No description yet..."/>
+                </function>
+                <function name="getSocketStatus">
+                    <desc>No description yet...</desc>
+                    <return name="return1" type="bool" desc=""/>
+                </function>
+                <function name="setActualColor">
+                    <desc>No description yet...</desc>
+                    <param name="color" type="int" desc=""/>
+                </function>
+                <function name="transferConfigToColor">
+                    <desc>No description yet...</desc>
+                </function>
+                <function name="setJob">
+                    <desc>No description yet...</desc>
+                    <param name="jobNo" type="int" desc=""/>
+                </function>
+                <function name="getJob">
+                    <desc>No description yet...</desc>
+                    <return name="newRetVal0" type="int" desc="No description yet..."/>
+                </function>
+                <function name="getJobName">
+                    <desc>No description yet...</desc>
+                    <return name="newRetVal0" type="string" desc="No description yet..."/>
+                </function>
+                <function name="setJobName">
+                    <desc>No description yet...</desc>
+                    <param name="name" type="string" desc=""/>
+                </function>
+                <function name="saveJobConfiguration">
+                    <desc>No description yet...</desc>
+                </function>
+                <function name="getActualColor">
+                    <desc>No description yet...</desc>
+                    <return name="return1" type="int" desc=""/>
+                </function>
+                <function name="getConfigColor">
+                    <desc>No description yet...</desc>
+                    <return name="newRetVal0" type="int" desc="No description yet..."/>
+                </function>
+                <function name="getConfigTolerance">
+                    <desc>No description yet...</desc>
+                    <return name="newRetVal0" type="int" desc="No description yet..."/>
+                </function>
+                <function name="getConfigMinBlobSize">
+                    <desc>No description yet...</desc>
+                    <return name="newRetVal0" type="int" desc="No description yet..."/>
+                </function>
+                <function name="setCameraIP">
+                    <desc>No description yet...</desc>
+                    <param name="address" type="string" desc=""/>
+                </function>
+                <function name="getCameraIP">
+                    <desc>No description yet...</desc>
+                    <return name="return1" type="string" desc=""/>
+                </function>
+                <function name="getStatusCameraConnected">
+                    <desc>No description yet...</desc>
+                    <return name="return1" type="bool" desc=""/>
+                </function>
+                <function name="connectCamera">
+                    <desc>No description yet...</desc>
+                </function>
+                <function name="getAccessCamConnect">
+                    <desc>No description yet...</desc>
+                    <return name="return1" type="bool" desc=""/>
+                </function>
+                <function name="getBlobsColor1">
+                    <desc>No description yet...</desc>
+                    <return name="newRetVal0" type="string" desc="No description yet..."/>
+                </function>
+                <function name="getActualColorActive">
+                    <desc>No description yet...</desc>
+                    <return name="newRetVal0" type="bool" desc="No description yet..."/>
+                </function>
+                <function name="setActualColorActive">
+                    <desc>No description yet...</desc>
+                    <param name="status" type="bool" desc=""/>
+                </function>
+                <function name="getBlobsColor2">
+                    <desc>No description yet...</desc>
+                    <return name="newRetVal0" type="string" desc="No description yet..."/>
+                </function>
+                <function name="getBlobsColor3">
+                    <desc>No description yet...</desc>
+                    <return name="newRetVal0" type="string" desc="No description yet..."/>
+                </function>
+                <function name="getBlobsColor4">
+                    <desc>No description yet...</desc>
+                    <return name="newRetVal0" type="string" desc="No description yet..."/>
+                </function>
+                <function name="getBlobMinGood1">
+                    <desc>No description yet...</desc>
+                    <return name="newRetVal0" type="int" desc="No description yet..."/>
+                </function>
+                <function name="setBlobMinGood1">
+                    <desc>No description yet...</desc>
+                    <param name="min" type="int" desc=""/>
+                </function>
+                <function name="getBlobMaxGood1">
+                    <desc>No description yet...</desc>
+                    <return name="newRetVal0" type="int" desc="No description yet..."/>
+                </function>
+                <function name="setBlobMaxGood1">
+                    <desc>No description yet...</desc>
+                    <param name="max" type="int" desc=""/>
+                </function>
+                <function name="getBlobMinGood2">
+                    <desc>No description yet...</desc>
+                    <return name="newRetVal0" type="int" desc="No description yet..."/>
+                </function>
+                <function name="getBlobMinGood3">
+                    <desc>No description yet...</desc>
+                    <return name="newRetVal0" type="int" desc="No description yet..."/>
+                </function>
+                <function name="getBlobMinGood4">
+                    <desc>No description yet...</desc>
+                    <return name="newRetVal0" type="int" desc="No description yet..."/>
+                </function>
+                <function name="setBlobMinGood2">
+                    <desc>No description yet...</desc>
+                    <param name="min" type="int" desc=""/>
+                </function>
+                <function name="setBlobMinGood3">
+                    <desc>No description yet...</desc>
+                    <param name="min" type="int" desc=""/>
+                </function>
+                <function name="setBlobMinGood4">
+                    <desc>No description yet...</desc>
+                    <param name="min" type="int" desc=""/>
+                </function>
+                <function name="getBlobMaxGood2">
+                    <desc>No description yet...</desc>
+                    <return name="newRetVal0" type="int" desc="No description yet..."/>
+                </function>
+                <function name="getBlobMaxGood3">
+                    <desc>No description yet...</desc>
+                    <return name="newRetVal0" type="int" desc="No description yet..."/>
+                </function>
+                <function name="getBlobMaxGood4">
+                    <desc>No description yet...</desc>
+                    <return name="newRetVal0" type="int" desc="No description yet..."/>
+                </function>
+                <function name="setBlobMaxGood2">
+                    <desc>No description yet...</desc>
+                    <param name="max" type="int" desc=""/>
+                </function>
+                <function name="setBlobMaxGood3">
+                    <desc>No description yet...</desc>
+                    <param name="max" type="int" desc=""/>
+                </function>
+                <function name="setBlobMaxGood4">
+                    <desc>No description yet...</desc>
+                    <param name="max" type="int" desc=""/>
+                </function>
+                <function name="selectColorViaPipette">
+                    <desc>No description yet...</desc>
+                </function>
+                <function name="getPipetteWriteable">
+                    <desc>No description yet...</desc>
+                    <return name="newRetVal0" type="bool" desc="No description yet..."/>
+                </function>
+                <function name="getTriggerMode">
+                    <desc>No description yet...</desc>
+                    <return name="newRetVal0" type="int" desc="No description yet..."/>
+                </function>
+                <function name="setTriggerMode">
+                    <desc>No description yet...</desc>
+                    <param name="uiMode" type="int" desc=""/>
+                </function>
+                <function name="triggerImage">
+                    <desc>No description yet...</desc>
+                </function>
+                <function name="setResultViewerActive">
+                    <desc>No description yet...</desc>
+                    <param name="newParam0" type="bool" desc="No description yet..."/>
+                </function>
+                <function name="setResultProcessingActive">
+                    <desc>No description yet...</desc>
+                    <param name="newParam0" type="bool" desc="No description yet..."/>
+                </function>
+                <function name="setForegroundImage">
+                    <desc>No description yet...</desc>
+                    <param name="newParam0" type="int" desc="No description yet..."/>
+                </function>
+                <function name="getForegroundImage">
+                    <desc>No description yet...</desc>
+                    <return name="newRetVal0" type="int" desc="No description yet..."/>
+                </function>
+                <function name="setBackgroundImage">
+                    <desc>No description yet...</desc>
+                    <param name="newParam0" type="int" desc="No description yet..."/>
+                </function>
+                <function name="getBackgroundImage">
+                    <desc>No description yet...</desc>
+                    <return name="newRetVal0" type="int" desc="No description yet..."/>
+                </function>
+                <function name="sendDataViaTCP">
+                    <desc>No description yet...</desc>
+                    <param name="newParam0" type="string" desc="No description yet..."/>
+                </function>
+                <function name="saveCommunicationConfig">
+                    <desc>No description yet...</desc>
+                </function>
+                <function name="setTcpIpIsActive">
+                    <desc>No description yet...</desc>
+                    <param name="status" type="bool" desc=""/>
+                </function>
+                <function name="getTcpIpIsActive">
+                    <desc>No description yet...</desc>
+                    <return name="newRetVal0" type="bool" desc="No description yet..."/>
+                </function>
+                <function name="getTcpIpPort">
+                    <desc>No description yet...</desc>
+                    <return name="newRetVal0" type="int" desc="No description yet..."/>
+                </function>
+                <function name="setTcpIpPort">
+                    <desc>No description yet...</desc>
+                    <param name="port" type="int" desc=""/>
+                </function>
+                <function name="getTcpIpServerAddress">
+                    <desc>No description yet...</desc>
+                    <return name="newRetVal0" type="string" desc="No description yet..."/>
+                </function>
+                <function name="setTcpIpServerAddress">
+                    <desc>No description yet...</desc>
+                    <param name="address" type="string" desc=""/>
+                </function>
+                <function name="getTcpIpOutputMode">
+                    <desc>No description yet...</desc>
+                    <return name="newRetVal0" type="int" desc="No description yet..."/>
+                </function>
+                <function name="setTcpIpOutputMode">
+                    <desc>No description yet...</desc>
+                    <param name="mode" type="int" desc=""/>
+                </function>
+                <function name="setDigitalOutActive">
+                    <desc>No description yet...</desc>
+                    <param name="status" type="bool" desc=""/>
+                </function>
+                <function name="getDigitalOutActive">
+                    <desc>No description yet...</desc>
+                    <return name="newRetVal0" type="bool" desc="No description yet..."/>
+                </function>
+                <function name="getColor1Active">
+                    <desc>No description yet...</desc>
+                    <return name="newRetVal0" type="bool" desc="No description yet..."/>
+                </function>
+                <function name="getColor2Active">
+                    <desc>No description yet...</desc>
+                    <return name="newRetVal0" type="bool" desc="No description yet..."/>
+                </function>
+                <function name="getColor3Active">
+                    <desc>No description yet...</desc>
+                    <return name="newRetVal0" type="bool" desc="No description yet..."/>
+                </function>
+                <function name="getColor4Active">
+                    <desc>No description yet...</desc>
+                    <return name="newRetVal0" type="bool" desc="No description yet..."/>
+                </function>
+                <function name="getSystemType">
+                    <desc>No description yet...</desc>
+                    <return name="newRetVal0" type="string" desc="No description yet..."/>
+                </function>
+                <function name="scanForCameraIp">
+                    <desc>No description yet...</desc>
+                </function>
+                <function name="sendIpToCamera">
+                    <desc>No description yet...</desc>
+                </function>
+                <function name="getFrameRateActive">
+                    <desc>No description yet...</desc>
+                    <return name="return1" type="bool" desc=""/>
+                </function>
+                <function name="getViewerImage">
+                    <desc>No description yet...</desc>
+                    <return name="newRetVal0" type="int" desc="No description yet..."/>
+                </function>
+                <function name="setCameraConfig">
+                    <desc>No description yet...</desc>
+                </function>
+                <function name="setConfigMaxBlobSize">
+                    <desc>No description yet...</desc>
+                    <param name="newParam0" type="int" desc="No description yet..."/>
+                </function>
+                <function name="getConfigMaxBlobSize">
+                    <desc>No description yet...</desc>
+                    <return name="newRetVal0" type="int" desc="No description yet..."/>
+                </function>
+                <function name="setFullRegion">
+                    <desc>No description yet...</desc>
+                </function>
+                <function name="getCameraSetupViewerStatus">
+                    <desc>No description yet...</desc>
+                    <return name="return1" type="bool" desc=""/>
+                </function>
+                <function name="getResultViewerActive">
+                    <desc>No description yet...</desc>
+                    <return name="newRetVal0" type="bool" desc="No description yet..."/>
+                </function>
+                <function name="getColorSelectorActive">
+                    <desc>No description yet...</desc>
+                    <return name="newRetVal0" type="bool" desc="No description yet..."/>
+                </function>
+                <function name="getResultProcessingActive">
+                    <desc>No description yet...</desc>
+                    <return name="newRetVal0" type="bool" desc="No description yet..."/>
+                </function>
+                <function name="getCameraIpWriteable">
+                    <desc>No description yet...</desc>
+                    <return name="return1" type="bool" desc=""/>
+                </function>
+                <function name="getRoiEditor">
+                    <desc>No description yet...</desc>
+                    <return name="newRetVal0" type="bool" desc="No description yet..."/>
+                </function>
+                <function name="setRoiEditor">
+                    <desc>No description yet...</desc>
+                    <param name="newParam0" type="bool" desc="No description yet..."/>
+                </function>
+                <function name="setActualRoiActive">
+                    <desc>No description yet...</desc>
+                    <param name="newParam0" type="bool" desc="No description yet..."/>
+                </function>
+                <function name="getActualRoiActive">
+                    <desc>No description yet...</desc>
+                    <return name="newRetVal0" type="bool" desc="No description yet..."/>
+                </function>
+                <function name="setOfflineDemoMode">
+                    <desc>No description yet...</desc>
+                    <param name="status" type="bool" desc=""/>
+                </function>
+                <function name="getOfflineDemoMode">
+                    <desc>No description yet...</desc>
+                    <return name="return1" type="bool" desc=""/>
+                </function>
+                <function name="triggerNewOfflineImage">
+                    <desc>No description yet...</desc>
+                </function>
+                <function name="getSwTriggerModeActive">
+                    <desc>No description yet...</desc>
+                    <return name="newRetVal0" type="bool" desc="No description yet..."/>
+                </function>
+                <function name="getObjectA">
+                    <desc>No description yet...</desc>
+                    <return name="newRetVal0" type="int" desc="No description yet..."/>
+                </function>
+                <function name="getObjectB">
+                    <desc>No description yet...</desc>
+                    <return name="newRetVal0" type="int" desc="No description yet..."/>
+                </function>
+                <function name="getObjectC">
+                    <desc>No description yet...</desc>
+                    <return name="newRetVal0" type="int" desc="No description yet..."/>
+                </function>
+                <function name="getObjectD">
+                    <desc>No description yet...</desc>
+                    <return name="newRetVal0" type="int" desc="No description yet..."/>
+                </function>
+                <function name="setObjectA">
+                    <desc>No description yet...</desc>
+                    <param name="newParam0" type="int" desc="No description yet..."/>
+                </function>
+                <function name="setObjectB">
+                    <desc>No description yet...</desc>
+                    <param name="newParam0" type="int" desc="No description yet..."/>
+                </function>
+                <function name="setObjectC">
+                    <desc>No description yet...</desc>
+                    <param name="newParam0" type="int" desc="No description yet..."/>
+                </function>
+                <function name="setObjectD">
+                    <desc>No description yet...</desc>
+                    <param name="newParam0" type="int" desc="No description yet..."/>
+                </function>
+                <function name="checkToNotifyResult">
+                    <desc>No description yet...</desc>
+                    <param name="newParam0" type="int" desc="No description yet..."/>
+                    <param name="newParam1" type="int" desc="No description yet..."/>
+                    <param name="newParam2" type="int" desc="No description yet..."/>
+                    <param name="newParam3" type="int" desc="No description yet..."/>
+                    <param name="newParam4" type="string" desc="No description yet..."/>
+                </function>
+                <function name="saveLastImage">
+                    <desc>No description yet...</desc>
+                </function>
+                <function name="changeOfflineSource">
+                    <desc>No description yet...</desc>
+                </function>
+                <function name="getShowAOI">
+                    <desc>No description yet...</desc>
+                    <return name="newRetVal0" type="bool" desc="No description yet..."/>
+                </function>
+                <function name="setShowAOI">
+                    <desc>No description yet...</desc>
+                    <param name="newParam0" type="bool" desc="No description yet..."/>
+                </function>
+                <function name="setColorMode">
+                    <desc>No description yet...</desc>
+                    <param name="newParam0" type="int" desc="No description yet..."/>
+                </function>
+                <function name="getColorMode">
+                    <desc>No description yet...</desc>
+                    <return name="newRetVal0" type="int" desc="No description yet..."/>
+                </function>
+                <function name="getImageToShow">
+                    <desc>No description yet...</desc>
+                    <return name="newRetVal0" type="int" desc="No description yet..."/>
+                </function>
+                <function name="setImageToShow">
+                    <desc>No description yet...</desc>
+                    <param name="newParam0" type="int" desc="No description yet..."/>
+                </function>
+                <function name="getActiveObjectList">
+                    <desc>No description yet...</desc>
+                    <return name="tableData" type="string" desc="No description yet..."/>
+                </function>
+            </serves>
+        </crown>
+        <meta key="author">Paulo Rodrigues</meta>
+        <meta key="version">1.0</meta>
+        <meta key="priority">low</meta>
+        <meta key="read-protected">false</meta>
+        <meta key="copy-protected">false</meta>
+        <entry path="scripts" default="ColorInspectionSorter.lua"/>
+    </application>
+</manifest>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Device xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\..\..\Docu\Parameter.cid.xsd">
+  <UserLevel/>
+  <IFD>
+    <CID>
+      <Block Name="Parameters">
+        <Group Name="connecteddevices">
+          <Variable Name="ConnectedDevices">
+            <Struct>
+              <BasicType Usage="Normal" Name="scanInterface">
+                <String FixedLength="False" Length="4" DefaultValue="ALL" Encoding="UTF8"/>
+              </BasicType>
+              <BasicType Usage="Normal" Name="showConfigure">
+                <Bool DefaultValue="True"/>
+              </BasicType>
+              <Struct Name="configure">
+                <BasicType Usage="Normal" Name="dhcp">
+                  <Bool/>
+                </BasicType>
+                <BasicType Name="ipAddress">
+                  <String FixedLength="False" Length="15" Encoding="UTF8"/>
+                </BasicType>
+                <BasicType Name="subnetMask">
+                  <String FixedLength="False" Length="15" Encoding="UTF8"/>
+                </BasicType>
+                <BasicType Name="defaultGateway">
+                  <String FixedLength="False" Length="15" Encoding="UTF8"/>
+                </BasicType>
+              </Struct>
+            </Struct>
+          </Variable>
+        </Group>
+      </Block>
+    </CID>
+  </IFD>
+</Device>

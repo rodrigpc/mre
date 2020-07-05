@@ -1,0 +1,11 @@
+{
+  "name": "MRECL2b11",
+  "version": "1.0.0",
+  "description": "Classificador de Frutas",
+  "components": [
+    "@sick-davinci/basic-elements"
+  ],
+  "dependencies": {
+    "@sick-davinci/basic-elements": "^4.0.2"
+  }
+}

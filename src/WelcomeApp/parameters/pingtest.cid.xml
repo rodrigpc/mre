@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Device xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\..\..\Docu\Parameter.cid.xsd">
+  <UserLevel/>
+  <IFD>
+    <CID>
+      <Block Name="Parameters">
+        <Group Name="pingtest">
+          <Variable Name="PingTest">
+            <Struct>
+              <Struct Name="ping">
+                <BasicType Name="ipAddress">
+                  <String FixedLength="False" Length="15" DefaultValue="127.0.0.1" Encoding="UTF8"/>
+                </BasicType>
+                <BasicType Name="timeoutMs">
+                  <UInt DefaultValue="1000" MaxValue="5000" MinValue="0" PhysicalUnit="ms"/>
+                </BasicType>
+                <BasicType Name="ifName">
+                  <String FixedLength="False" Length="4" Encoding="UTF8"/>
+                </BasicType>
+                <BasicType Name="payloadSizeBytes">
+                  <UInt DefaultValue="32" MaxValue="" MinValue="" PhysicalUnit="bytes"/>
+                </BasicType>
+              </Struct>
+              <BasicType Name="showAdvancedOptions">
+                <Bool/>
+              </BasicType>
+            </Struct>
+          </Variable>
+        </Group>
+      </Block>
+    </CID>
+  </IFD>
+</Device>

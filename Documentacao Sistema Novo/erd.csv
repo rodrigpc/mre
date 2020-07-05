@@ -1,0 +1,114 @@
+"dbms","table_catalog","table_schema","table_name","column_name","ordinal_position","data_type","character_maximum_length","constraint_type","table_schema-2","table_name-2","column_name-2"
+"postgresql","postgres","public","company","company_id",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","postgres","public","company_type","company_type_id",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","postgres","public","configuration","configuration_id",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","postgres","public","configuration_features","configuration_id",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","postgres","public","configuration_features","output_id",2,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","postgres","public","configuration_features","color_id",3,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","postgres","public","configuration_features","size_id",4,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","postgres","public","cycle","cycle_id",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","postgres","public","cycle_result","cycle_id",2,"integer",NULL,"FOREIGN KEY","public","cycle","cycle_id"
+"postgresql","postgres","public","cycle_result","cycle_result_id",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","postgres","public","cycle_result_detail","cycle_result_detail_id",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","postgres","public","filter","filter_id",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","postgres","public","background_filter","filter_id",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","postgres","public","fruit","filter_id",2,"integer",NULL,"FOREIGN KEY","public","background_filter","filter_id"
+"postgresql","postgres","public","fruit","fruit_id",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","postgres","public","fruit_color","fruit_id",2,"integer",NULL,"FOREIGN KEY","public","fruit","fruit_id"
+"postgresql","postgres","public","fruit_color","color_id",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","postgres","public","fruit_color_parameter","color_id",2,"integer",NULL,"FOREIGN KEY","public","fruit_color","color_id"
+"postgresql","postgres","public","fruit_color_parameter","parameter_id",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","postgres","public","fruit_variety","fruit_id",2,"integer",NULL,"FOREIGN KEY","public","fruit","fruit_id"
+"postgresql","postgres","public","fruit_variety","variety_id",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","postgres","public","fruit_variety_size","variety_id",2,"integer",NULL,"FOREIGN KEY","public","fruit_variety","variety_id"
+"postgresql","postgres","public","fruit_variety_size","size_id",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","postgres","public","property","property_id",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","postgres","public","variety","variety_id",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","postgres","public","tabela_teste",NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","filter","color_pink",12,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","fruit_variety_size","size_max",5,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","company","active",11,"character",1,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","cycle_result","output_number",5,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","company_type","company_type",2,"character varying",20,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","variety","weight_4",15,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","configuration","creation_date",4,"timestamp without time zone",NULL,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","cycle","active",7,"character",1,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","company","company_type_id",2,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","variety","size_name_2",9,"character varying",50,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","cycle_result_detail","cycle_result_color_id",4,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","filter","color_green",8,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","filter","bri_min",4,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","background_filter","color_blue",9,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","background_filter","sat_min",2,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","configuration","status",3,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","variety","size_name_1",8,"character varying",50,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","variety","active",18,"character",1,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","cycle","is_finished",6,"character",1,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","variety","size_min",3,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","fruit_color_parameter","param_type",5,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","cycle_result","quantity",6,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","fruit_color_parameter","order_id",3,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","cycle","end_date",5,"timestamp without time zone",NULL,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","fruit","name",3,"character varying",100,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","cycle","supplier_id",2,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","variety","size_1",4,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","fruit_color_parameter","param_desc",4,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","variety","red_percent",16,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","fruit_variety","name",3,"character varying",100,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","fruit_variety_size","name",3,"character varying",100,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","background_filter","color_red",4,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","property","name",2,"character varying",50,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","company","address_city",7,"character varying",50,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","background_filter","color_cyan",8,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","background_filter","color_yellow",6,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","variety","size_3",6,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","cycle_result_detail","cycle_result_quantity",6,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","cycle_result","color_id",4,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","cycle","variety_id",3,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","cycle_result_detail","cycle_result_weight",7,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","filter","color_orange",6,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","company","address",5,"character varying",255,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","variety","weight_2",13,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","variety","size_name_4",11,"character varying",50,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","filter","color_purple",11,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","company","cnpj",4,"character varying",20,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","background_filter","color_orange",5,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","fruit_variety","size_analysis",4,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","company","email",10,"character varying",50,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","background_filter","color_purple",10,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","fruit","active",4,"character",1,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","variety","weight_1",12,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","property","char_value",3,"character varying",50,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","fruit_color_parameter","param_value",6,"character varying",50,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","fruit_variety_size","size_min",4,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","filter","color_yellow",7,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","filter","color_cyan",9,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","fruit_color","image_path",5,"character varying",512,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","fruit_variety","active",5,"character",1,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","variety","size_2",5,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","filter","color_red",5,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","cycle_result","size_id",3,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","variety","weight_3",14,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","configuration","name",2,"character varying",100,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","fruit_color","order_id",3,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","variety","green_percent",17,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","company","phone",9,"character varying",20,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","fruit_color","name",4,"character varying",100,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","variety","size_4",7,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","cycle","start_date",4,"timestamp without time zone",NULL,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","fruit_variety_size","weight",6,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","company","name",3,"character varying",100,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","filter","sat_min",3,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","company","address_state",8,"character varying",2,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","variety","size_name_3",10,"character varying",50,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","background_filter","color_green",7,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","background_filter","bri_min",3,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","variety","name",2,"character varying",100,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","filter","color_blue",10,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","cycle_result_detail","cycle_result_size_id",3,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","fruit_variety_size","weight_max",7,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","company","address_postal_code",6,"character varying",10,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","filter","filter_name",2,"character varying",100,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","cycle_result_detail","cycle_result_output_number",5,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","cycle_result_detail","cycle_result_cycle_id",2,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","postgres","public","background_filter","color_pink",11,"integer",NULL,NULL,NULL,NULL,NULL

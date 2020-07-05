@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- example application cid file which adds application parameters upon runtime -->
+<Device xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\..\..\Docu\Parameter.cid.xsd">
+  <IFD>
+    <CID>
+      <Block Name="CalibrationSetup">
+        <Group Name="General">
+          <Variable Name="MaxNumImages" WriteAccessRef="Run" VirtualMemoryRef="ApplicationParameters">
+            <BasicType>
+                <UDInt DefaultValue="11" MinValue="6" MaxValue="40"/>
+            </BasicType>
+          </Variable>
+          <Variable Name="TimeStepInMS" WriteAccessRef="Run" VirtualMemoryRef="ApplicationParameters">
+              <BasicType>
+                <UDInt DefaultValue="1000" MinValue="500" MaxValue="10000"/>
+              </BasicType>
+          </Variable>
+          <Variable Name="CameraType" WriteAccessRef="Run" VirtualMemoryRef="ApplicationParameters">
+              <BasicType>
+                <String DefaultValue="Directory" FixedLength="False" Length="80"/>
+              </BasicType>
+          </Variable>
+           <Variable Name="IPAddress" WriteAccessRef="Run" VirtualMemoryRef="ApplicationParameters">
+              <BasicType>
+                <String DefaultValue="192.168.0.1" FixedLength="False" Length="80"/>
+              </BasicType>
+          </Variable>
+          <Variable Name="SquareWidth" WriteAccessRef="Run" VirtualMemoryRef="ApplicationParameters">
+              <BasicType>
+                <Real DefaultValue="50" MinValue="5" MaxValue="1000"/>
+              </BasicType>
+          </Variable>              
+          <Variable Name="SquareHeight" WriteAccessRef="Run" VirtualMemoryRef="ApplicationParameters">
+              <BasicType>
+                <Real DefaultValue="50" MinValue="5" MaxValue="1000"/>
+              </BasicType>
+          </Variable>
+          <Variable Name="NumSquaresRow" WriteAccessRef="Run" VirtualMemoryRef="ApplicationParameters">
+              <BasicType>
+                <UDInt DefaultValue="6" MinValue="4" MaxValue="1000"/>
+              </BasicType>
+          </Variable>
+          <Variable Name="CustomPixelClock" WriteAccessRef="Run" VirtualMemoryRef="ApplicationParameters">
+              <BasicType>
+                <UDInt DefaultValue="72" MinValue="0" MaxValue="73"/>
+              </BasicType>
+          </Variable>
+          <Variable Name="NumSquaresColumn" WriteAccessRef="Run" VirtualMemoryRef="ApplicationParameters">
+              <BasicType>
+                <UDInt DefaultValue="6" MinValue="4" MaxValue="1000"/>
+              </BasicType>
+          </Variable>
+          <Variable Name="IntrinsicCameraModelFilename" WriteAccessRef="Run" VirtualMemoryRef="ApplicationParameters">
+              <BasicType>
+                <String DefaultValue="public/intrinsicCamModel.xml" FixedLength="False" Length="80"/>
+              </BasicType>
+          </Variable>
+          <Variable Name="ExtrinsicCameraModelFilename" WriteAccessRef="Run" VirtualMemoryRef="ApplicationParameters">
+              <BasicType>
+                <String DefaultValue="public/extrinsicCamModel.xml" FixedLength="False" Length="80"/>
+              </BasicType>
+          </Variable>
+          <Variable Name="ComplexArrayAllTypes" WriteAccessRef="Run" VirtualMemoryRef="ApplicationParameters">
+              <BasicType>
+                <String DefaultValue="[]" FixedLength="False" Length="1024"/>
+              </BasicType>
+          </Variable>
+           <Variable Name="ShutterTime" WriteAccessRef="Run" VirtualMemoryRef="ApplicationParameters">
+              <BasicType>
+                <String DefaultValue="2000" FixedLength="False" Length="80"/>
+              </BasicType>
+          </Variable>
+          <Variable Name="AcquisitionMode" WriteAccessRef="Run" VirtualMemoryRef="ApplicationParameters">
+              <BasicType>
+                <String DefaultValue="FIXED_FREQUENCY" FixedLength="False" Length="1024"/>
+              </BasicType>
+          </Variable>
+          <Variable Name="FrameRate" WriteAccessRef="Run" VirtualMemoryRef="ApplicationParameters">
+              <BasicType>
+                <String DefaultValue="25" FixedLength="False" Length="80"/>
+              </BasicType>
+          </Variable>
+          <Variable Name="GainFactor" WriteAccessRef="Run" VirtualMemoryRef="ApplicationParameters">
+              <BasicType>
+                <String DefaultValue="AUTO" FixedLength="False" Length="80"/>
+              </BasicType>
+          </Variable>
+          <Variable Name="ExtrinsicEstimationMethod" WriteAccessRef="Run" VirtualMemoryRef="ApplicationParameters">
+              <BasicType>
+                <String DefaultValue="PLAIN" FixedLength="False" Length="1024"/>
+              </BasicType>
+          </Variable>
+          <Variable Name="CalibrationPatternLink" WriteAccessRef="Run" VirtualMemoryRef="ApplicationParameters">
+              <BasicType>
+                <String DefaultValue="https://supportportal.sick.com/media/editor/rydsda/2017/01/10/a4_plain_24045um.png" FixedLength="False" Length="1024"/>
+              </BasicType>
+          </Variable>
+        </Group>
+      </Block>
+    </CID>
+  </IFD>
+  <Hardware>
+    <VirtualMemory Name="ApplicationParameters"/>
+  </Hardware>
+</Device>

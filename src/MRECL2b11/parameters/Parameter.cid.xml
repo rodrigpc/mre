@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Device xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\..\..\Docu\Parameter.cid.xsd">
+  <UserLevel/>
+  <IFD>
+    <CID>
+      <Block Name="MRECL2b11">
+        <Group Name="Jobs">
+          <Variable Name="Job" VirtualMemoryRef="ApplicationParameters">
+            <Array FixedLength="True" Length="10">
+              <Struct>
+                <Array FixedLength="True" Length="30" Name="Object">
+                  <Struct>
+                    <BasicType Name="ColorValue">
+                      <USInt DefaultValue="100"/>
+                    </BasicType>
+                    <BasicType Name="ColorTolerance">
+                      <USInt DefaultValue="1"/>
+                    </BasicType>
+                    <BasicType Name="ColorActive">
+                      <Bool/>
+                    </BasicType>
+                    <BasicType Name="MinGood">
+                      <UInt DefaultValue="1"/>
+                    </BasicType>
+                    <BasicType Name="MaxGood">
+                      <USInt DefaultValue="1"/>
+                    </BasicType>
+                    <BasicType Name="ROI_CenterX">
+                      <Real DefaultValue="100.0"/>
+                    </BasicType>
+                    <BasicType Name="ROI_CenterY">
+                      <Real DefaultValue="100.0"/>
+                    </BasicType>
+                    <BasicType Name="ROI_Width">
+                      <Real DefaultValue="100.0"/>
+                    </BasicType>
+                    <BasicType Name="ROI_Height">
+                      <Real DefaultValue="100.0"/>
+                    </BasicType>
+                    <BasicType Description="" Name="RegionColorValue">
+                      <USInt DefaultValue="1"/>
+                    </BasicType>
+                    <BasicType Name="MinBlobSize">
+                      <UDInt DefaultValue="1000"/>
+                    </BasicType>
+                    <BasicType Name="MaxBlobSize">
+                      <UDInt DefaultValue="100000"/>
+                    </BasicType>
+                    <BasicType Name="ROI_Active">
+                      <Bool/>
+                    </BasicType>
+                    <BasicType Name="ColorMode">
+                      <USInt DefaultValue="1"/>
+                    </BasicType>
+                  </Struct>
+                </Array>
+                <BasicType Name="JobName">
+                  <String FixedLength="False" Length="99" DefaultValue="NoName"/>
+                </BasicType>
+                <BasicType Name="ForegroundMin">
+                  <USInt DefaultValue="50"/>
+                </BasicType>
+                <BasicType Name="ForegroundMax">
+                  <USInt DefaultValue="255"/>
+                </BasicType>
+                <BasicType Name="BackgroundMin">
+                  <USInt DefaultValue="0"/>
+                </BasicType>
+                <BasicType Name="BackgroundMax">
+                  <USInt DefaultValue="40"/>
+                </BasicType>
+                <BasicType Name="ShutterTime">
+                  <UInt DefaultValue="20000"/>
+                </BasicType>
+                <BasicType Name="Framerate">
+                  <USInt DefaultValue="3" MaxValue="20" MinValue="1"/>
+                </BasicType>
+                <BasicType Name="Gain">
+                  <UInt DefaultValue="10" MaxValue="100" MinValue="10"/>
+                </BasicType>
+                <BasicType Name="Scalefactor">
+                  <USInt DefaultValue="5" MaxValue="10" MinValue="1"/>
+                </BasicType>
+                <BasicType Name="TriggerMode">
+                  <USInt DefaultValue="2" MaxValue="4" MinValue="1"/>
+                </BasicType>
+                <BasicType Usage="Normal" Name="DigitalOutputActive">
+                  <Bool/>
+                </BasicType>
+                <BasicType Name="TcpIpOutputMode">
+                  <USInt DefaultValue="1"/>
+                </BasicType>
+                <BasicType Name="ForegroundImage">
+                  <USInt DefaultValue="1" MaxValue="3" MinValue="1"/>
+                </BasicType>
+                <BasicType Name="BackgroundImage">
+                  <USInt DefaultValue="2" MaxValue="3" MinValue="1"/>
+                </BasicType>
+                <BasicType Name="TcpIpSetActive">
+                  <Bool/>
+                </BasicType>
+                <BasicType Name="TcpIpPort">
+                  <UInt DefaultValue="2120"/>
+                </BasicType>
+                <BasicType Name="TcpIpServerIpAddress">
+                  <String FixedLength="False" Length="15" DefaultValue="192.168.0.100"/>
+                </BasicType>
+                <BasicType Name="CameraIP">
+                  <String FixedLength="False" Length="15" DefaultValue="192.168.1.100"/>
+                </BasicType>
+                <BasicType Name="CameraSubnet">
+                  <String FixedLength="False" Length="15" DefaultValue="255.255.255.0"/>
+                </BasicType>
+              </Struct>
+            </Array>
+          </Variable>
+        </Group>
+        <Group Name="Configuration">
+          <Variable Name="ActualJob" VirtualMemoryRef="ApplicationParameters">
+            <BasicType Usage="Normal">
+              <USInt DefaultValue="1"/>
+            </BasicType>
+          </Variable>
+        </Group>
+        <Group Name="Machine"/>
+      </Block>
+    </CID>
+  </IFD>
+  <Hardware>
+    <VirtualMemory Name="ApplicationParameters"/>
+  </Hardware>
+</Device>

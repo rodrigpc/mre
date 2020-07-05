@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<manifest>
+    <application name="TableControl">
+        <crown name="TableControl">
+            <desc>The functions and events from this App are served and are used inside the page compontent to control the table</desc>
+            <serves>
+                <event name="OnTableChanged">
+                    <desc>No description yet...</desc>
+                    <param name="data" type="string" desc="No description yet..."/>
+                </event>
+                <function name="removeRow">
+                    <desc>No description yet...</desc>
+                </function>
+                <function name="addRow">
+                    <desc>No description yet...</desc>
+                </function>
+                <function name="printSelectedIndex">
+                    <desc>No description yet...</desc>
+                    <param name="index" type="int" desc="No description yet..."/>
+                </function>
+                <function name="printSelectedRow">
+                    <desc>No description yet...</desc>
+                    <param name="selection" type="string" desc="No description yet..."/>
+                </function>
+                <function name="getTableData">
+                    <desc>No description yet...</desc>
+                    <return name="tableData" type="string" desc="No description yet..."/>
+                </function>
+            </serves>
+        </crown>
+        <meta key="author">AppSpace Sample</meta>
+        <meta key="version">2.5.0</meta>
+        <meta key="priority">low</meta>
+        <meta key="copy-protected">false</meta>
+        <meta key="read-protected">false</meta>
+        <meta key="tags">Page,Device Independent</meta>
+        <entry path="scripts" default="TableControl.lua"/>
+    </application>
+</manifest>

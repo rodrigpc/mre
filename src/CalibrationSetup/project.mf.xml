@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<manifest>
+    <application name="CalibrationSetup">
+        <crown name="CalibrationSetup">
+            <desc>user script</desc>
+            <serves>
+                <event name="OnNewMaxNumImages">
+                    <desc>No description yet...</desc>
+                    <param name="nImages" type="int" desc="No description yet..."/>
+                </event>
+                <event name="OnNewTimeStep">
+                    <desc>No description yet...</desc>
+                    <param name="timeStep" type="int" desc="No description yet..."/>
+                </event>
+                <event name="OnImageRecordingStopped">
+                    <desc>No description yet...</desc>
+                </event>
+                <event name="OnNewIntrinsicCalibrationFilename">
+                    <desc>No description yet...</desc>
+                    <param name="intrinsicFilename" type="string" desc="No description yet..."/>
+                </event>
+                <event name="OnImageRecordingReset">
+                    <desc>No description yet...</desc>
+                </event>
+                <event name="OnNewSquareWidth">
+                    <desc>No description yet...</desc>
+                    <param name="newSquareWidth" type="float" desc="No description yet..."/>
+                </event>
+                <event name="OnNewNumSquaresPerRow">
+                    <desc>No description yet...</desc>
+                    <param name="newNumSquaresPerRow" type="int" desc="No description yet..."/>
+                </event>
+                <event name="OnNewNumSquaresPerColumn">
+                    <desc>No description yet...</desc>
+                    <param name="newNumSquaresPerColumn" type="int" desc="No description yet..."/>
+                </event>
+                <event name="OnNewSquareHeight">
+                    <desc>No description yet...</desc>
+                    <param name="newSquareHeight" type="float" desc="No description yet..."/>
+                </event>
+                <event name="OnNewExtrinsicCalibrationFilename">
+                    <desc>No description yet...</desc>
+                    <param name="newExtrinsicCalibrationFilename" type="string" desc="No description yet..."/>
+                </event>
+                <event name="OnNewIPAddress">
+                    <desc>No description yet...</desc>
+                    <param name="ip" type="string" desc="No description yet..."/>
+                </event>
+                <event name="OnChangeImageProvider">
+                    <desc>No description yet...</desc>
+                </event>
+                <event name="OnNewIntrinsicConsoleMessage">
+                    <desc>No description yet...</desc>
+                    <param name="string" type="string" desc="No description yet..."/>
+                </event>
+                <event name="OnNewExtrinsicConsoleMessage">
+                    <desc>No description yet...</desc>
+                    <param name="message" type="string" desc="No description yet..."/>
+                </event>
+                <event name="OnNewCameraType">
+                    <desc>No description yet...</desc>
+                    <param name="camType" type="string" desc="No description yet..."/>
+                </event>
+                <event name="OnNewParameterizationConsoleMessage">
+                    <desc>No description yet...</desc>
+                    <param name="consoleMessage" type="string" desc="No description yet..."/>
+                </event>
+                <event name="OnNewTableData">
+                    <desc>No description yet...</desc>
+                    <param name="newTableData" type="string" desc="No description yet..."/>
+                </event>
+                <event name="OnNewCalibrationPatternLink">
+                    <desc>No description yet...</desc>
+                    <param name="calibrationPatternLink" type="string" desc="No description yet..."/>
+                </event>
+                <function name="startImageRecording">
+                    <desc>No description yet...</desc>
+                </function>
+                <function name="stopImageRecording">
+                    <desc>No description yet...</desc>
+                </function>
+                <function name="startCalibration">
+                    <desc>No description yet...</desc>
+                </function>
+                <function name="getCapturedImagesList">
+                    <desc>No description yet...</desc>
+                    <return name="ImageList" type="string" desc="No description yet..."/>
+                </function>
+                <function name="setSelectedImage">
+                    <desc>No description yet...</desc>
+                </function>
+                <function name="getSelectedImageStatus">
+                    <desc>No description yet...</desc>
+                    <return name="selectedImageStatus" type="bool" desc="No description yet..."/>
+                </function>
+                <function name="stopCalibration">
+                    <desc>No description yet...</desc>
+                </function>
+                <function name="resetIntrinsic">
+                    <desc>No description yet...</desc>
+                </function>
+                <function name="setExtrinsicCalibrationImage">
+                    <desc>No description yet...</desc>
+                </function>
+                <function name="startExtrinsicCalibration">
+                    <desc>No description yet...</desc>
+                </function>
+                <function name="resetExtrinsic">
+                    <desc>No description yet...</desc>
+                </function>
+                <function name="getIntrinsicConsoleMessage">
+                    <desc>No description yet...</desc>
+                    <return name="consoleString" type="string" desc="No description yet..."/>
+                </function>
+                <function name="getExtrinsicConsoleMessage">
+                    <desc>No description yet...</desc>
+                    <return name="consoleString" type="string" desc="No description yet..."/>
+                </function>
+                <function name="setCapturedImagesList">
+                    <desc>No description yet...</desc>
+                    <param name="tableData" type="string" desc="No description yet..."/>
+                </function>
+                <function name="setParameters">
+                    <desc>No description yet...</desc>
+                </function>
+                <function name="setDefaultParameters">
+                    <desc>No description yet...</desc>
+                </function>
+                <function name="setTableData">
+                    <desc>No description yet...</desc>
+                    <return name="TableData" type="string" desc="No description yet..."/>
+                </function>
+                <function name="selectAllImages">
+                    <desc>No description yet...</desc>
+                </function>
+                <function name="loadIntrinsicCameraModel">
+                    <desc>No description yet...</desc>
+                </function>
+                <function name="setCurrentImageFromTable">
+                    <desc>No description yet...</desc>
+                    <param name="tableData" type="string" desc="No description yet..."/>
+                </function>
+                <function name="deleteSelectedImagesFromTable">
+                    <desc>No description yet...</desc>
+                </function>
+            </serves>
+        </crown>
+        <crown name="Script">
+            <uses>
+                <function name="serveFunction"/>
+                <function name="notifyEvent"/>
+                <function name="serveEvent"/>
+                <function name="sleep"/>
+                <function name="register"/>
+            </uses>
+        </crown>
+        <crown name="View">
+            <uses>
+                <function name="view"/>
+                <function name="create"/>
+            </uses>
+        </crown>
+        <crown name="Image">
+            <uses>
+                <function name="clone"/>
+                <function name="addConstant"/>
+                <function name="normalize"/>
+                <function name="getSize"/>
+            </uses>
+            <crown name="Calibration">
+                <uses/>
+                <crown name="CameraModel">
+                    <uses>
+                        <function name="save"/>
+                        <function name="load"/>
+                    </uses>
+                </crown>
+                <crown name="Pose">
+                    <uses>
+                        <function name="estimate"/>
+                    </uses>
+                </crown>
+                <crown name="Camera">
+                    <uses>
+                        <function name="setDistortionCoefficientsEnabled"/>
+                        <function name="create"/>
+                        <function name="setSkewEnabled"/>
+                        <function name="addImage"/>
+                        <function name="setCheckerSquareSideLength"/>
+                        <function name="calculate"/>
+                        <function name="setTargetType"/>
+                    </uses>
+                </crown>
+            </crown>
+            <crown name="Provider">
+                <uses/>
+                <crown name="RemoteCamera">
+                    <uses>
+                        <event name="OnNewImage"/>
+                        <function name="create"/>
+                        <function name="register"/>
+                        <function name="setConfig"/>
+                        <function name="connect"/>
+                        <function name="setIPAddress"/>
+                        <function name="start"/>
+                        <function name="stop"/>
+                        <function name="setType"/>
+                    </uses>
+                    <crown name="GigEVisionConfig">
+                        <uses>
+                            <function name="create"/>
+                            <function name="setFrameRate"/>
+                            <function name="setShutterTime"/>
+                        </uses>
+                    </crown>
+                    <crown name="I2DConfig">
+                        <uses>
+                            <function name="setAutoGainEnabled"/>
+                            <function name="setShutterTime"/>
+                            <function name="create"/>
+                            <function name="setFrameRate"/>
+                            <function name="setAcquisitionMode"/>
+                        </uses>
+                    </crown>
+                    <crown name="IDSuEyeConfig">
+                        <uses>
+                            <function name="setAutoGainEnabled"/>
+                            <function name="setAcquisitionMode"/>
+                            <function name="setShutterTime"/>
+                            <function name="setFrameRate"/>
+                            <function name="create"/>
+                        </uses>
+                    </crown>
+                    <crown name="V3SXX0Config">
+                        <uses>
+                            <function name="create"/>
+                        </uses>
+                    </crown>
+                </crown>
+                <crown name="Directory">
+                    <uses>
+                        <event name="OnNewImage"/>
+                        <function name="setCycleTime"/>
+                        <function name="stop"/>
+                        <function name="register"/>
+                        <function name="start"/>
+                        <function name="create"/>
+                        <function name="setPath"/>
+                    </uses>
+                </crown>
+            </crown>
+        </crown>
+        <crown name="Parameters">
+            <uses>
+                <function name="get"/>
+                <function name="set"/>
+                <function name="apply"/>
+                <function name="savePermanent"/>
+            </uses>
+        </crown>
+        <crown name="File">
+            <uses>
+                <function name="exists"/>
+            </uses>
+        </crown>
+        <crown name="Timer">
+            <uses>
+                <event name="OnExpired"/>
+                <function name="create"/>
+                <function name="stop"/>
+                <function name="setPeriodic"/>
+                <function name="start"/>
+                <function name="register"/>
+                <function name="setExpirationTime"/>
+            </uses>
+        </crown>
+        <crown name="string">
+            <uses>
+                <function name="sub"/>
+                <function name="find"/>
+            </uses>
+        </crown>
+        <crown name="math">
+            <uses>
+                <function name="floor"/>
+            </uses>
+        </crown>
+        <crown name="SensorData">
+            <uses>
+                <function name="getOrigin"/>
+                <function name="getTimestamp"/>
+            </uses>
+        </crown>
+        <crown name="Engine">
+            <uses>
+                <event name="OnStarted"/>
+            </uses>
+        </crown>
+        <meta key="author">AppSpace App</meta>
+        <meta key="version">1.2</meta>
+        <meta key="priority">low</meta>
+        <meta key="copy-protected">false</meta>
+        <meta key="read-protected">false</meta>
+        <meta key="tags">App,Image,PicoCam,MidiCam</meta>
+        <entry path="scripts" default="main.lua"/>
+    </application>
+</manifest>

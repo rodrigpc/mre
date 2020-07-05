@@ -1,0 +1,58 @@
+<layout-row id="RowLayout1">
+	<layout-column id="ColumnLayout1" style="justify-content:space-evenly">
+		<layout-row id="RowLayout2">
+			<davinci-value-display id="ValueDisplay1"  label="Camera Linha 1" style="flex-grow:1;flex-basis:auto">
+		</davinci-value-display>
+			<davinci-toggle-switch id="ToggleSwitch1" tabindex="0" checked color-on="secondary">
+		</davinci-toggle-switch>
+			
+		</layout-row>
+		
+		
+		
+		
+		<sick-viewer2d id="Viewer2D1" protocol="auto" hide-toolbar>
+		</sick-viewer2d>
+		
+		
+		
+		
+		
+				
+		
+	</layout-column>
+	
+	
+	<layout-column id="ColumnLayout2" style="justify-content:space-evenly">
+				
+		<layout-row id="RowLayout3">
+			<davinci-value-display id="ValueDisplay2"  label="Camera Linha 2">
+		</davinci-value-display>
+			<davinci-toggle-switch id="ToggleSwitch2" tabindex="0" checked color-on="secondary">
+		</davinci-toggle-switch>
+			
+		</layout-row>
+		
+		
+		
+		
+		
+		<sick-viewer2d id="Viewer2D2" protocol="auto" hide-toolbar>
+		</sick-viewer2d>
+		
+		
+	</layout-column>
+	<layout-column id="ColumnLayout3">
+		<davinci-button id="Button1" type="primary" icon="action/autorenew">
+			<span>Início</span>
+		</davinci-button>
+				
+		<davinci-button id="Button2" type="primary" icon="action/highlight_off">
+			<span>Parar</span>
+		</davinci-button>
+		<davinci-status-indicator id="StatusIndicator1" color-on="#e83f33" color-off="#e60707" style="flex-shrink:0;flex-basis:auto"  status>
+			<span>Status</span>
+		</davinci-status-indicator>
+	</layout-column>
+  
+</layout-row>

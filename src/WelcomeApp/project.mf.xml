@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<manifest>
+    <application name="WelcomeApp">
+        <crown name="WelcomeApp">
+            <desc>No description yet...</desc>
+            <serves/>
+            <crown name="Identify">
+                <desc>No description yet...</desc>
+                <serves>
+                    <function name="blink">
+                        <desc>No description yet...</desc>
+                    </function>
+                </serves>
+            </crown>
+            <crown name="PingTest">
+                <desc>No description yet...</desc>
+                <serves>
+                    <event name="ResultShow">
+                        <desc>No description yet...</desc>
+                        <param name="show" type="bool" desc=""/>
+                    </event>
+                    <event name="ResultSuccess">
+                        <desc>No description yet...</desc>
+                        <param name="success" type="bool" desc=""/>
+                    </event>
+                    <event name="ResultTime">
+                        <desc>No description yet...</desc>
+                        <param name="responseTimeMs" type="string" desc=""/>
+                    </event>
+                    <function name="getInterfaces">
+                        <desc>No description yet...</desc>
+                        <return name="interfaces" type="string" desc="No description yet..."/>
+                    </function>
+                    <function name="ping">
+                        <desc>No description yet...</desc>
+                    </function>
+                </serves>
+            </crown>
+            <crown name="ConnectedDevices">
+                <desc>No description yet...</desc>
+                <serves>
+                    <event name="ScanProgress">
+                        <desc>No description yet...</desc>
+                        <param name="progress" type="int" desc=""/>
+                    </event>
+                    <event name="ScanResults">
+                        <desc>No description yet...</desc>
+                        <param name="devices" type="string" desc=""/>
+                    </event>
+                    <event name="ConfigureShow">
+                        <desc>No description yet...</desc>
+                        <param name="show" type="bool" desc="No description yet..."/>
+                    </event>
+                    <event name="ConfigureRunning">
+                        <desc>No description yet...</desc>
+                        <param name="running" type="bool" desc=""/>
+                    </event>
+                    <event name="ConfigureSuccess">
+                        <desc>No description yet...</desc>
+                        <param name="status" type="string" desc=""/>
+                    </event>
+                    <event name="ConfigureData">
+                        <desc>No description yet...</desc>
+                        <param name="json" type="string" desc="No description yet..."/>
+                    </event>
+                    <function name="scan">
+                        <desc>No description yet...</desc>
+                    </function>
+                    <function name="getInterfaces">
+                        <desc>No description yet...</desc>
+                        <return name="interfaces" type="string" desc=""/>
+                    </function>
+                    <function name="setInterface">
+                        <desc>No description yet...</desc>
+                        <param name="interface" type="string" desc=""/>
+                    </function>
+                    <function name="setSelection">
+                        <desc>No description yet...</desc>
+                        <param name="index" type="int" desc=""/>
+                    </function>
+                    <function name="configure">
+                        <desc>No description yet...</desc>
+                        <return name="success" type="bool" desc=""/>
+                    </function>
+                </serves>
+            </crown>
+            <crown name="Power">
+                <desc>No description yet...</desc>
+                <serves>
+                    <event name="onConnectorTable">
+                        <desc>No description yet...</desc>
+                        <param name="data" type="string" desc="No description yet..."/>
+                    </event>
+                    <event name="onConnectionsAreApplied">
+                        <desc>No description yet...</desc>
+                        <param name="status" type="bool" desc="No description yet..."/>
+                    </event>
+                    <function name="getConnectorTable">
+                        <desc>No description yet...</desc>
+                        <return name="data" type="string" desc="No description yet..."/>
+                    </function>
+                    <function name="tableSelectionChanged">
+                        <desc>No description yet...</desc>
+                        <param name="selection" type="string" desc="No description yet..."/>
+                    </function>
+                    <function name="storeConnectionsClicked">
+                        <desc>No description yet...</desc>
+                    </function>
+                    <function name="readConnectionsClicked">
+                        <desc>No description yet...</desc>
+                    </function>
+                    <function name="eraseConnectionsClicked">
+                        <desc>No description yet...</desc>
+                    </function>
+                    <function name="getConnectionsAreApplied">
+                        <desc>No description yet...</desc>
+                        <return name="status" type="bool" desc="No description yet..."/>
+                    </function>
+                </serves>
+            </crown>
+        </crown>
+        <meta key="author">SICK AG</meta>
+        <meta key="version">1.0.1</meta>
+        <meta key="priority">low</meta>
+        <meta key="tags">SIM1012,Eth2,Getting Started,System,Page,Default,Settings,Configuration</meta>
+        <meta key="read-protected">false</meta>
+        <meta key="copy-protected">false</meta>
+        <entry path="scripts" default="main.lua"/>
+    </application>
+</manifest>

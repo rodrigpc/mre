@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<manifest>
+    <application name="DimensioningFlows">
+        <crown name="DimensioningFlows">
+            <desc>user script</desc>
+            <serves>
+                <function name="generateTrigger">
+                    <include>data-flow</include>
+                    <desc>No description yet...</desc>
+                    <param name="scan" type="object" desc="No description yet..."/>
+                    <return name="trigger" type="bool" desc="No description yet..."/>
+                </function>
+                <function name="transformToPointCloud">
+                    <include>data-flow</include>
+                    <desc>No description yet...</desc>
+                    <param name="scan" type="const object" desc="No description yet..."/>
+                    <return name="pointCloud" type="object" desc="No description yet..."/>
+                </function>
+                <function name="printResult">
+                    <include>data-flow</include>
+                    <desc>No description yet...</desc>
+                    <param name="result" type="object" desc="No description yet..."/>
+                </function>
+            </serves>
+        </crown>
+        <meta key="author">AppSpace sample</meta>
+        <meta key="version">2.2.0</meta>
+        <meta key="priority">low</meta>
+        <meta key="tags">Scan,PointCloud</meta>
+        <meta key="read-protected">false</meta>
+        <meta key="copy-protected">false</meta>
+        <entry path="scripts" default="Dimensioning.lua"/>
+    </application>
+</manifest>

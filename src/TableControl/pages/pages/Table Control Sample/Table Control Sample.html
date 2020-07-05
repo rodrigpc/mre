@@ -1,0 +1,21 @@
+<layout-row id="RowLayout1">
+  <layout-column id="ColumnLayout2" style="flex-basis:100%">
+    <sjs-element id="TableControl3" class="sopasjs.ui.table.TableControl" options='{"label":"Sample Table","columns":[{"control":"sopasjs.ui.StaticTextControl","options":{"defaultValue":"Value"},"label":"ID","showInTable":true,"mapping":[{"property":"value","path":"idValue"}]},{"control":"sopasjs.ui.StaticTextControl","options":{"defaultValue":"Value"},"label":"Name / Description","showInTable":true,"mapping":[{"property":"value","path":"nameValue"}]},{"control":"sopasjs.ui.StatusIndicatorControl","options":{"onColor":"#0f0","offColor":"#f00","defaultValue":""},"label":"State Indicator","showInTable":true,"mapping":[{"property":"value","path":"stateValue"}]}],"rowSelection":true,"fixedSize":true,"detailView":true}'>
+      <sjs-binding name="TableControl.printSelectedIndex" property="selectedindex" topic="url:api/crown/TableControl/printSelectedIndex" path="param/args/index" auto-commit post-get="f_97b6cfa63e544a3ba7232a8f1e029fe7" options='{"method":"POST","parseHeader":true}'> </sjs-binding>
+      <sjs-binding name="TableControl.printSelectedRow" property="selection" topic="url:api/crown/TableControl/printSelectedRow" path="param/args/selection" auto-commit post-get="f_e1c2e7e171ca494d8d1143f7b1a6a378" options='{"method":"POST","parseHeader":true}'> </sjs-binding>
+      <sjs-binding name="TableControl.OnTableChanged" property="data" topic="edpws:crown" auto-commit pre-set="f_749c7221cafd438eb615e258bf7a9775" options="{}" update-on-resume result-path="TableControl/OnTableChanged"> </sjs-binding>
+      <sjs-binding property="data" topic="url:api/crown/TableControl/getTableData" path="result/data/tableData" update-on-resume direction="get" pre-set="f_749c7221cafd438eb615e258bf7a9775" options='{"method":"POST","parseHeader":true}'> </sjs-binding>
+    </sjs-element>
+  </layout-column>
+  <layout-column id="ColumnLayout4" style="flex-basis:33%">
+    <sjs-element id="ButtonControl5" class="sopasjs.ui.ButtonControl" options='{"label":"Remove Selected","value":"submit","type":"primary","command":"","commandArgs":"","icon":"","image":"","showErrorDialog":false,"showSuccessDialog":false,"showConfirmDialog":false,"confirmMessage":"","confirmTitle":"","successMessage":"","successTitle":"","errorMessage":"","errorTitle":"","customClass":""}'>
+      <sjs-binding name="TableControl.removeRow" property="submit" topic="url:api/crown/TableControl/removeRow" auto-commit options='{"method":"POST","parseHeader":true}'> </sjs-binding>
+    </sjs-element>
+  </layout-column>
+  <layout-column id="ColumnLayout6" style="flex-basis:33%"> </layout-column>
+  <layout-column id="ColumnLayout7" style="flex-basis:33%">
+    <sjs-element id="ButtonControl8" class="sopasjs.ui.ButtonControl" options='{"label":" Add Row","value":"submit","type":"primary","command":"","commandArgs":"","icon":"","image":"","showErrorDialog":false,"showSuccessDialog":false,"showConfirmDialog":false,"confirmMessage":"","confirmTitle":"","successMessage":"","successTitle":"","errorMessage":"","errorTitle":"","customClass":""}'>
+      <sjs-binding name="TableControl.addRow" property="submit" topic="url:api/crown/TableControl/addRow" auto-commit options='{"method":"POST","parseHeader":true}'> </sjs-binding>
+    </sjs-element>
+  </layout-column>
+</layout-row>

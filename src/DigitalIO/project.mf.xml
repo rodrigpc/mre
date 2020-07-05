@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<manifest>
+    <application name="DigitalIO">
+        <crown name="DigitalIO">
+            <desc>user script</desc>
+            <serves/>
+            <uses/>
+        </crown>
+        <meta key="author">AppSpace Sample</meta>
+        <meta key="priority">low</meta>
+        <meta key="version">2.5.0</meta>
+        <meta key="copy-protected">false</meta>
+        <meta key="read-protected">false</meta>
+        <meta key="tags">Getting Started,IOPorts,SIM4000</meta>
+        <entry path="scripts" default="DigitalIO.lua"/>
+    </application>
+</manifest>

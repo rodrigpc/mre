@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<glue>
+    <info>
+        <usage>dflow</usage>
+    </info>
+    <blocks id="Main">
+        <block type="Provider" name="scanProv" event="Scan.Provider.File.OnNewScan(scan,sensordata)" x="645.63" y="-125.33" width="120.0" height="100.0" path="Scan.Provider.File.OnNewScan">
+            <parameters>
+                <param name="File">
+                    <val>resources/TestDataTim1.xml</val>
+                </param>
+                <param name="DataSetID">
+                    <val>1</val>
+                </param>
+            </parameters>
+        </block>
+        <block type="Function" name="Median" function="scan=Scan.MedianFilter.filter(scan)" x="513.22" y="288.64" width="120.0" height="100.0" path="Scan.MedianFilter.filter">
+            <parameters>
+                <param name="Width">
+                    <val>30</val>
+                </param>
+            </parameters>
+        </block>
+        <block type="Function" name="RangeFilter" function="filteredCloud=PointCloud.RangeFilter.filter(inputCloud)" x="751.83" y="618.61" width="120.0" height="100.0" path="PointCloud.RangeFilter.filter">
+            <parameters>
+                <param name="YRange">
+                    <val>50</val>
+                    <val>850</val>
+                </param>
+                <param name="ZRange">
+                    <val>60</val>
+                    <val>800</val>
+                </param>
+            </parameters>
+        </block>
+        <block type="Function" name="PointCloudCollector" function="cloud=PointCloud.Collector.collect(cloud,trigger)" x="880.73" y="777.37" width="120.0" height="100.0" path="PointCloud.Collector.collect">
+            <parameters>
+                <param name="CollectTriggerCycles">
+                    <val>0</val>
+                </param>
+                <param name="InitialPointCount">
+                    <val>10000</val>
+                </param>
+            </parameters>
+        </block>
+        <block type="Function" name="Calculate" function="result,convexHull=PointCloud.Dimensioning.Singulated.calculate(pointcloud)" x="881.99" y="981.67" width="120.0" height="100.0" path="PointCloud.Dimensioning.Singulated.calculate">
+            <parameters>
+                <param name="Border">
+                    <val>0</val>
+                    <val>800</val>
+                </param>
+                <param name="MinObject">
+                    <val>20</val>
+                    <val>20</val>
+                    <val>20</val>
+                </param>
+                <param name="MaxObject">
+                    <val>1600</val>
+                    <val>1600</val>
+                    <val>1600</val>
+                </param>
+            </parameters>
+        </block>
+        <block type="Consumer" name="PointCloudView" function="View.view(iconics,decoration)" x="623.72" y="979.63" width="120.0" height="100.0" path="View.view">
+            <parameters>
+                <param name="ID">
+                    <val>viewer3D</val>
+                </param>
+            </parameters>
+        </block>
+        <block type="Function" name="generateTrigger" function="trigger=DimensioningFlows.generateTrigger(scan)" x="898.72" y="118.49" width="120.0" height="100.0" path="DimensioningFlows.generateTrigger">
+            <parameters/>
+        </block>
+        <block type="Function" name="transformToPointCloud" function="pointCloud=DimensioningFlows.transformToPointCloud(scan)" x="612.62" y="452.7" width="120.0" height="100.0" path="DimensioningFlows.transformToPointCloud">
+            <parameters/>
+        </block>
+        <block type="Function" name="filter" function="scan=Scan.EdgeHitFilter.filter(scan)" x="432.17" y="118.08" width="120.0" height="100.0" path="Scan.EdgeHitFilter.filter">
+            <parameters>
+                <param name="MaxDistNeighbor">
+                    <val>30</val>
+                </param>
+            </parameters>
+        </block>
+        <block type="Consumer" name="printResult" function="DimensioningFlows.printResult(result)" x="916.7" y="1177.55" width="120.0" height="100.0" path="DimensioningFlows.printResult">
+            <parameters/>
+        </block>
+    </blocks>
+    <connections>
+        <link from="RangeFilter:filteredCloud" to="PointCloudCollector:cloud"/>
+        <link from="PointCloudCollector:cloud" to="Calculate:pointcloud"/>
+        <link from="PointCloudCollector:cloud" to="PointCloudView:iconics"/>
+        <link from="scanProv:scan" to="generateTrigger:scan"/>
+        <link from="generateTrigger:trigger" to="PointCloudCollector:trigger"/>
+        <link from="Median:scan" to="transformToPointCloud:scan"/>
+        <link from="transformToPointCloud:pointCloud" to="RangeFilter:inputCloud"/>
+        <link from="scanProv:scan" to="filter:scan"/>
+        <link from="filter:scan" to="Median:scan"/>
+        <link from="Calculate:result" to="printResult:result"/>
+    </connections>
+</glue>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<manifest>
+    <application name="TomatoSorter_1NN">
+        <crown name="TomatoSorter_1NN">
+            <desc>user script</desc>
+            <serves/>
+        </crown>
+        <meta key="author">AppSpace sample</meta>
+        <meta key="version">1.2</meta>
+        <meta key="priority">low</meta>
+        <meta key="tags">InspectorP,SIM4000,Image,Algorithm,Machine Learning</meta>
+        <meta key="read-protected">false</meta>
+        <meta key="copy-protected">false</meta>
+        <entry path="scripts" default="TomatoSorter_1NN.lua"/>
+    </application>
+</manifest>

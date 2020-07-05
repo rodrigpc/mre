@@ -1,0 +1,48 @@
+{
+  "version": "1.0",
+  "pages": [
+    {
+      "category": "Selecao",
+      "pages": [
+        {
+          "path": "Selecao/Modo Selecao.html",
+          "name": "Modo Selecao"
+        },
+        {
+          "path": "Selecao/Modo Operacao.html",
+          "name": "Modo Operacao"
+        }
+      ]
+    },
+    {
+      "category": "Cadastros",
+      "pages": [
+        {
+          "path": "Cadastros/Minha Empresa.html",
+          "name": "Minha Empresa"
+        },
+        {
+          "path": "Cadastros/Clientes.html",
+          "name": "Clientes"
+        },
+        {
+          "path": "Cadastros/Fornecedores.html",
+          "name": "Fornecedores"
+        }
+      ]
+    },
+    {
+      "category": "Cadastros de Frutas",
+      "pages": [
+        {
+          "path": "Cadastros de Frutas/Regras.html",
+          "name": "Regras"
+        },
+        {
+          "path": "Cadastros de Frutas/Variedades.html",
+          "name": "Variedades"
+        }
+      ]
+    }
+  ]
+}

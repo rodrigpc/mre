@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<manifest>
+    <application name="DeviceDiscovery">
+        <crown name="DeviceDiscovery">
+            <desc>user script</desc>
+            <serves>
+                <event name="ScansChanged">
+                    <desc>No description yet...</desc>
+                    <param name="scans" type="string" desc="No description yet..."/>
+                </event>
+                <event name="SelectionChanged">
+                    <desc>No description yet...</desc>
+                    <param name="selection" type="string" desc="No description yet..."/>
+                </event>
+                <event name="DHCPChanged">
+                    <desc>No description yet...</desc>
+                    <param name="dhcpEnabled" type="bool" desc="No description yet..."/>
+                </event>
+                <event name="ScanRunningStateChanged">
+                    <desc>No description yet...</desc>
+                    <param name="running" type="bool" desc="No description yet..."/>
+                </event>
+                <function name="scan">
+                    <desc>No description yet...</desc>
+                </function>
+                <function name="setInterface">
+                    <desc>No description yet...</desc>
+                    <param name="interface" type="string" desc="No description yet..."/>
+                </function>
+                <function name="config">
+                    <desc>No description yet...</desc>
+                    <return name="success" type="bool" desc="No description yet..."/>
+                </function>
+                <function name="beep">
+                    <desc>No description yet...</desc>
+                    <return name="success" type="bool" desc="No description yet..."/>
+                </function>
+                <function name="setSelectionToConfig">
+                    <desc>No description yet...</desc>
+                    <param name="selection" type="string" desc="No description yet..."/>
+                </function>
+                <function name="setConfigMacAddress">
+                    <desc>No description yet...</desc>
+                    <param name="macAddress" type="string" desc="No description yet..."/>
+                </function>
+                <function name="setConfigIpAddress">
+                    <desc>No description yet...</desc>
+                    <param name="ipAddress" type="string" desc="No description yet..."/>
+                </function>
+                <function name="setConfigSubnetMask">
+                    <desc>No description yet...</desc>
+                    <param name="subnetMask" type="string" desc="No description yet..."/>
+                </function>
+                <function name="setConfigDefaultGateway">
+                    <desc>No description yet...</desc>
+                    <param name="defaultGateway" type="string" desc="No description yet..."/>
+                </function>
+                <function name="setConfigDHCPEnabled">
+                    <desc>No description yet...</desc>
+                    <param name="dhcpEnabled" type="bool" desc="No description yet..."/>
+                </function>
+                <function name="setBeepTime">
+                    <desc>No description yet...</desc>
+                    <param name="time" type="int" desc="No description yet..."/>
+                </function>
+                <function name="getBeepTime">
+                    <desc>No description yet...</desc>
+                    <return name="beepTime" type="int" desc="No description yet..."/>
+                </function>
+                <function name="setBeepMAC">
+                    <desc>No description yet...</desc>
+                    <param name="macAddress" type="string" desc="No description yet..."/>
+                </function>
+                <function name="getConfigDHCP">
+                    <desc>No description yet...</desc>
+                    <return name="dhcpEnabled" type="bool" desc="No description yet..."/>
+                </function>
+                <function name="getInterfaces">
+                    <desc>No description yet...</desc>
+                    <return name="interfaces" type="string" desc="No description yet..."/>
+                </function>
+                <function name="getCurrentConfigMAC">
+                    <desc>No description yet...</desc>
+                    <return name="mac" type="string" desc="No description yet..."/>
+                </function>
+                <function name="getCurrentConfigIP">
+                    <desc>No description yet...</desc>
+                    <return name="ip" type="string" desc="No description yet..."/>
+                </function>
+                <function name="getCurrentConfigSubnet">
+                    <desc>No description yet...</desc>
+                    <return name="subnet" type="string" desc="No description yet..."/>
+                </function>
+                <function name="getCurrentConfigGateway">
+                    <desc>No description yet...</desc>
+                    <return name="gateway" type="string" desc="No description yet..."/>
+                </function>
+                <function name="getCurrentConfigDHCP">
+                    <desc>No description yet...</desc>
+                    <return name="dhcp" type="bool" desc="No description yet..."/>
+                </function>
+                <function name="getCurrentInterface">
+                    <desc>No description yet...</desc>
+                    <return name="interface" type="string" desc="No description yet..."/>
+                </function>
+                <function name="getCurrentScans">
+                    <desc>No description yet...</desc>
+                    <return name="scans" type="string" desc="No description yet..."/>
+                </function>
+            </serves>
+        </crown>
+        <meta key="author">AppSpace Sample</meta>
+        <meta key="version">2.5.0</meta>
+        <meta key="priority">low</meta>
+        <meta key="read-protected">false</meta>
+        <meta key="copy-protected">false</meta>
+        <entry path="scripts" default="deviceDiscovery.lua"/>
+    </application>
+</manifest>

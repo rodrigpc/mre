@@ -1,0 +1,85 @@
+<layout-column id="ColumnLayout1" style="flex-basis:100%">
+	<davinci-value-display id="ValueDisplay1"  label="Informações de Cadastro">
+		</davinci-value-display>
+	<layout-row id="RowLayout1" style="align-self:stretch">
+		<layout-column id="ColumnLayout4">
+			
+			
+			
+			<layout-row id="RowLayout4">
+				
+				<davinci-toggle-group id="ToggleGroup1">
+				
+				<davinci-radio-button id="Radiobutton1" value="1"  checked>
+					<span>Alterar</span>
+				</davinci-radio-button>
+				<davinci-radio-button id="Radiobutton2" value="2">
+					<span>Alterar</span>
+				</davinci-radio-button>
+			</davinci-toggle-group>
+				<davinci-drop-down id="DropDown1" data="{1:laranja;2:tomate}">
+		</davinci-drop-down>
+				
+			</layout-row>
+			<layout-row id="RowLayout5">
+				<davinci-text-field id="TextField1" type="text" label="Nome da Espécie" style="align-self:flex-end">
+		</davinci-text-field>
+			</layout-row>
+			<davinci-slider id="Slider1" min="0" max="255" ticks="1"  style="align-self:baseline" legend>
+				<span>______Tom:</span>
+			</davinci-slider>
+			<davinci-slider id="Slider2" min="0" max="255" ticks="1"  style="align-self:baseline" legend>
+				<span>Saturação:</span>
+			</davinci-slider>
+			<davinci-slider id="Slider3" min="0" max="255" ticks="1"  style="align-self:baseline"  legend>
+				<span>____Brilho:</span>
+			</davinci-slider>
+			<davinci-value-display id="ValueDisplay4" label="Definição de Regras">
+			</davinci-value-display>
+			<davinci-text-field id="TextField3" type="text" label="Nome da Regra">
+		</davinci-text-field>
+			<davinci-button id="Button1" type="primary"  icon="content/add">
+			<span>Adicionar</span>
+		</davinci-button>
+			<davinci-text-field id="TextField4" type="text" label="Nome da Regra">
+		</davinci-text-field>
+			<davinci-button id="Button2" type="primary" icon="content/add">
+					<span>Adicionar</span>
+		</davinci-button>
+			<davinci-button id="Button3" type="primary" icon="content/save">
+			<span>Salvar</span>
+		</davinci-button>
+			
+		</layout-column>
+		
+		
+		<layout-column id="ColumnLayout3">
+			<davinci-value-display id="ValueDisplay2" label="Imagem Original">
+			</davinci-value-display>
+			<sick-viewer2d id="Viewer2D1" protocol="auto" hide-toolbar>
+			</sick-viewer2d>
+			</layout-column>
+		<layout-column id="ColumnLayout2">
+					<davinci-value-display id="ValueDisplay3" label="Imagem Filtrada">
+					</davinci-value-display>
+					<sick-viewer2d id="Viewer2D2" protocol="auto" hide-toolbar>
+					</sick-viewer2d>
+		</layout-column>
+		
+		
+		
+		
+		
+		</layout-row>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</layout-column>
